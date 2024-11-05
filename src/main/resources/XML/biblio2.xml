@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblio SYSTEM "file:/C:/Users/29010-55-06/Downloads/zowe-profile/Biblio.dtd">
+<biblio>
+    <etudiant code="E1" nom="Doe" prenom="John" age="23">
+        <livre id="11" titre="XML" dateEmprunt="2024-10-29" rendu="Oui" prix="20"/>
+        <livre id="12" titre="Java" dateEmprunt="2024-10-28" rendu="Non" prix="30"/>
+        <livre id="13" titre="JS" dateEmprunt="2024-10-29" rendu="Non" prix="50"/>
+        <livre id="15" titre="React" dateEmprunt="2024-10-28" rendu="Non" prix="40"/>
+    </etudiant>
+    <etudiant code="E2" nom="Doe" prenom="Janne" age="15">
+        <livre id="11" titre="XML" dateEmprunt="2024-10-30" rendu="Non" prix="20"/>
+        <livre id="33" titre="Python" dateEmprunt="2024-10-01" rendu="Oui" prix="40"/>
+        <livre id="12" titre="React" dateEmprunt="2024-10-28" rendu="Non" prix="40"/>
+    </etudiant>
+</biblio>

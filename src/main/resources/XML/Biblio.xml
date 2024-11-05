@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ** Une seule Racine ** -->
+<biblio>
+    <etudiant code="1" nom="A" prenom="B" age="32">
+        <livre id="524" titre="java" datePret="2024-10-01" rendu="oui"/>
+        <livre id="525" titre="XML" datePret="2024-10-13"  rendu="non"/>
+    </etudiant>
+    <etudiant code="2" nom="C" prenom="D" age="35">
+        <livre id="526" titre="python" datePret="2024-10-30" rendu="non"/>
+    </etudiant>
+</biblio>
