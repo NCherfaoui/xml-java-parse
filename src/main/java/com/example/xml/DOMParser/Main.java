@@ -7,11 +7,17 @@ public class Main {
         DomParser parser = new DomParser();
 
         // Créer et écrire un document XML
-//        Document document = parser.createDocument();
-//        parser.writeDocumentToFile(document, "output.xml");
+        Document document = parser.createDocument();
+        parser.writeDocumentToFile(document, "output.xml");
 
         // Charger et lire un document XML
         Document loadedDocument = parser.loadDocument("output.xml");
         parser.readDocument(loadedDocument);
+
+
+        // Évaluer des expressions XPath
+        String expression = "/root/author[@name='James']";
+        parser.evaluateXPath(loadedDocument, expression);
+
     }
 }

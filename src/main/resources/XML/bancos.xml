@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <banks>
     <bank>
         <COMPE>001</COMPE>
@@ -9010,6 +9010,12 @@
         <Type>Banco Comercial</Type>
         <PixType>DRCT</PixType>
         <Charge>true</Charge>
+        <CreditDocument>true</CreditDocument>
+        <LegalCheque>false</LegalCheque>
+        <DetectaFLow>false</DetectaFLow>
+        <PCR>true</PCR>
+        <PCRP>false</PCRP>
+        <Url xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" p3:nil="true"/>
         <DateOperationStarted>2002-04-22</DateOperationStarted>
         <DatePixStarted>2021-08-09 10:00:00</DatePixStarted>
         <DateRegistered>2021-05-05T09:11:12.7114464-03:00</DateRegistered>

@@ -1,5 +1,10 @@
 package com.example.xml.DOMParser;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -8,12 +13,10 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathFactory;
 import java.io.File;
 
 public class DomParser {
@@ -77,6 +80,21 @@ public class DomParser {
             StreamResult result = new StreamResult(new File(filePath));
             transformer.transform(source, result);
         } catch (TransformerException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void evaluateXPath(Document document, String expression) {
+        try {
+            XPathFactory xPathFactory = XPathFactory.newInstance();
+            XPath xPath = xPathFactory.newXPath();
+            XPathExpression xPathExpression = xPath.compile(expression);
+            NodeList nodeList = (NodeList) xPathExpression.evaluate(document, XPathConstants.NODESET);
+
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                System.out.println("Node: " + nodeList.item(i).getNodeName() + ", Text: " + nodeList.item(i).getTextContent());
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
